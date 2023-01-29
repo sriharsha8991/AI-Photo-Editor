@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href='/statics/app.css' />
+
+  </head>
+  <body>
+    <header>
+      <h1>AI Photo Editing App</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Edit</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Upload your photo</h2>
+      <form>
+        <input type="file" id="photo" name="photo">
+        <label for="photo">Choose a photo</label>
+        <br>
+        <input type="submit" value="Upload">
+      </form>
+      <h2>Select an editing option</h2>
+      <div id="editing-options">
+        <button id="option1" onclick="editOption1()">Color Correction</button>
+        <button id="option2" onclick="editOption2()">Image Restoration</button>
+        <button id="option3" onclick="editOption3()">Object Removal</button>
+        <button id="option4" onclick="editOption4()">Style Transfer</button>
+        <button id="option5" onclick="editOption5()">Object Detection</button>
+      </div>
+    </main>
+    <footer>
+      <div class="social-media-links">
+        <div class="social-media-link">
+          <!-- <a href="#" id="facebook" onclick="showDropdown('facebook')">Facebook</a> -->
+          <a href="#" class="social-media-link" id="facebook" onclick="showDropdown('facebook')">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <div id="facebook-dropdown" class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="social-media-link">
+          <a href="#" class="social-media-link" id="twitter" onclick="showDropdown('twitter')">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <div id="twitter-dropdown" class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="social-media-link">
+          <a href="#" class="social-media-link" id="instagram" onclick="showDropdown('instagram')">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <div id="instagram-dropdown" class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

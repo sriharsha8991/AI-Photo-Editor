@@ -1,0 +1,188 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin-left: 100px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin-right: 100px;
+  justify-content: center;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+p.Heading{
+  font-family: 'Rubik', sans-serif;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+main h2 {
+  margin-bottom: 20px;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+main form input[type="file"] {
+  display: none;
+}
+
+main form label {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+main form label:hover {
+  background-color: rgb(177, 172, 172) ;
+  color: rgb(53, 51, 51) ;
+}
+
+main form label:active {
+  transform:translateY(2px);
+}
+
+main form input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+main form input:hover {
+  background-color: rgb(177, 172, 172) ;
+  color: rgb(53, 51, 51) ;
+}
+
+main form input:active {
+  transform:translateY(2px);
+}
+
+#editing-options {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#editing-options button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button {
+  background-color: blue; 
+  color: white; 
+  border: none;
+  padding: 10px 20px; 
+  border-radius: 9px; 
+  font-size: 16px;
+  box-shadow: 2px 2px 2px #888888;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+button:hover {
+  background-color: darkblue;
+  transform: scale(1.1);
+}
+button:active {
+  background-color:rgb(10, 10, 26);
+  
+}
+
+a:hover {
+  background-color: white;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 9px; 
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+
+.social-media-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media-link {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-media-link:hover {
+  color:#555;
+}
+
+.dropdown-content {
+  display: none; /* Hide the dropdown by default */
+  position: absolute; /* Position the dropdown */
+  z-index: 1; /* Make sure it's on top of other elements */
+  background-color: #3a3838; /* Set the background color */
+  min-width: 160px; /* Set a minimum width */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add a box shadow */
+  transition: max-height 0.5s ease-out; /* Add a transition effect */
+  overflow: hidden; /* Hide overflow */
+  max-height: 0; /* Set max-height to 0 to start */
+}
+
+.show {
+  max-height: 500px; /* Set max-height to a value greater than 0 */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show the dropdown */
+  max-height: 500px; /* Set max-height to a value greater than 0 */
+}
