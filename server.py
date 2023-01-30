@@ -1,31 +1,9 @@
-from flask import Flask, request, render_template
-from PIL import Image
-from io import BytesIO
-import base64
-from matplotlib import pyplot as plt
-import cv2 
-# necessary libraries for python
-import cv2
-import numpy as np
-import matplotlib.image as mg
-import matplotlib.pyplot as plt
-import tensorflow as tf
-import numpy as np
-from keras.utils import get_file
-import IPython.display as display
-import matplotlib as mpl
-import numpy as np
-import PIL.Image
-import time
-import functools
-from keras.preprocessing import image
 import os
-from os import listdir
-import keras.utils as image
-from PIL import Image as PImage
-from keras.applications.vgg19 import VGG19
-from  keras.applications.vgg19 import decode_predictions
-from keras.applications.vgg19 import preprocess_input
+from flask import Flask, request, render_template
+from io import BytesIO
+from PIL import Image
+import base64
+import cv2
 
 app = Flask(__name__,template_folder='templates',static_folder='statics')
 
@@ -33,12 +11,16 @@ app = Flask(__name__,template_folder='templates',static_folder='statics')
 def index():
     if request.method == 'POST':
         file = request.files['file']
-
-        # Process the image here
-        img = function1(file)
-        img = Image.open(file)
-
-        # Convert the image to a base64 encoded string
+        # Save the uploaded file to a temporary location in the 'temp' directory
+        temp_dir = 'temp_data'
+        if not os.path.exists(temp_dir):
+            os.makedirs(temp_dir)
+        filename = os.path.join(temp_dir, file.filename)
+        file.save(filename)
+        # Convert the image to grayscale
+        gray = function2(filename)
+        # Convert the grayscale image back to an image and save it to a BytesIO object
+        img = Image.fromarray(gray)
         img_io = BytesIO()
         img.save(img_io, 'JPEG', quality=70)
         img_io.seek(0)
@@ -47,10 +29,9 @@ def index():
         return render_template('display.html', processed_img=processed_img)
     return render_template('display.html')
 
-def function1(img_path):
-    img = plt.imread(img_path)
-    dst = cv2.fastNlMeansDenoisingColored(img,None, 10, 10, 7, 21)
-    return dst
+def function1(filename):
+    img = cv2.imread(filename)
+    return cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 def function2(img_path,clip_hist_percent=1):
     
@@ -109,23 +90,6 @@ def function2(img_path,clip_hist_percent=1):
     j = cv2.convertScaleAbs(img, alpha=alpha, beta=beta)
     return j
 
-# @app.route('/process_image', methods=['POST'])
-# def process_image():
-#     file = request.files['image']
-#     function = request.form.get("function")
-#     if function == "function1":
-#         processed_image = function1(file)
-#     elif function == "function2":
-#         processed_image = function2(file)
-#     # elif function == "function3":
-#     #     processed_image = function3(file)
-#     # elif function == "function4":
-#     #     processed_image = function4(file)
-#     # elif function == "function5":
-#     #     processed_image = function5(file)
-#     # Save the processed image
-#     processed_image.save("processed.jpg")
-#     return redirect(url_for('display'))
-
 if __name__ == '__main__':
     app.run(debug=True)
+
