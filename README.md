@@ -34,6 +34,7 @@ CI/CCd tools like jenkins were also in testing stage for smooth deployment and p
 
 To brief out the project, it was divided into 5 major sections which are as follows: 
 
+
 a. Automatic colour correction: adjusting the brightness, contrast, and colour balance of an image to make it more visually pleasing.
 
 b. Image restoration: removing noise, blur, or other distortions from an image to improve its quality. 
@@ -46,7 +47,9 @@ e. Face and object recognition: Identifying and tagging faces or objects in an i
 
 The first ipynb file shows the hierarchy of implementation, that ends with object identification and Tagging.
 
-
+<a href="https://github.com/nalin879/AI-Photo-Editor/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=nalin879/AI-Photo-Editor" />
+</a>
 
   
   
