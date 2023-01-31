@@ -47,8 +47,8 @@ e. Face and object recognition: Identifying and tagging faces or objects in an i
 
 The first ipynb file shows the hierarchy of implementation, that ends with object identification and Tagging.
 
-<a href="https://github.com/nalin879/AI-Photo-Editor/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=nalin879/AI-Photo-Editor" />
+<a href="https://github.com/KAVINKUMAR1102/AI-Photo-Editor/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=KAVINKUMAR1102/AI-Photo-Editor" />
 </a>
 
   
