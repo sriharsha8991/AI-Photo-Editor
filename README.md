@@ -37,7 +37,8 @@ To brief out the project, it was divided into 5 major sections which are as foll
 
 a. Automatic colour correction: adjusting the brightness, contrast, and colour balance of an image to make it more visually pleasing.
 
-b. Image restoration: removing noise, blur, or other distortions from an image to improve its quality. 
+b. Image restoration: removing noise, blur, or other distortions from an image to improve its quality.
+[img](https://github.com/sriharsha8991/AI-Photo-Editor/blob/main/giphy.gif)
 
 c. Object removal: removing unwanted objects from an image, such as a person or a piece of trash. 
 
